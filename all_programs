@@ -1,0 +1,22 @@
+  GNU nano 6.2                               Dockerfile           
+FROM nginx:latest
+COPY index.html /usr/share/nginx/html/index.html
+EXPOSE 80
+CMD ["nginx","-g","daemon off;"]
+
+commands
+ docker build -t my .
+docker run -d -p 8989:80 my
+------------------------------------
+docker pull tomcat
+docker run -d -p 8088:8080 tomcat
+------------------------------
+docker pull nginx
+ docker run -d -p 8981:80 nginx
+----------------------------
+   jenkins port no
+sudo nano /etc/default/jenkins
+sudo nano /lib/systemd/system/jenkins.service
+ sudo systemctl daemon-reload
+ sudo systemctl restart jenkins
+   ---------------------------------
